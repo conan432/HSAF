@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.model
+checkpoints/
+runs/
+data/
+hf_cache/

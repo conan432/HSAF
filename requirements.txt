@@ -1,0 +1,12 @@
+torch>=2.5
+keras_preprocessing
+pandas==2.3.3
+PyYAML
+scikit-learn
+numpy
+h5py
+heavyball==3.2.0
+tqdm
+huggingface_hub
+pyarrow
+polars<=1.0.0

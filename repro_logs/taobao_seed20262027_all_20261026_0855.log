@@ -1,0 +1,171 @@
+>>> Running RankMixer_Taobao_Action_seed20262027
+W1026 08:55:07.632000 843896 site-packages/torch/distributed/run.py:793] 
+W1026 08:55:07.632000 843896 site-packages/torch/distributed/run.py:793] *****************************************
+W1026 08:55:07.632000 843896 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1026 08:55:07.632000 843896 site-packages/torch/distributed/run.py:793] *****************************************
+2026-10-26 08:55:10,845 P844008 INFO Params: {
+    "accumulation_steps": "1",
+    "attention_dropout": "0",
+    "batch_size": "2048",
+    "block_cache_size": "2",
+    "blocked": "True",
+    "data_format": "parquet",
+    "data_root": "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/HSAF/runs/config_Taobao_Action_seed20262027_843835",
+    "dataset_dir": "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao",
+    "dataset_id": "Taobao_Action",
+    "distributed": "True",
+    "embedding_dim": "16",
+    "enable_bf16": "True",
+    "epochs": "1",
+    "expansion_factor": "4",
+    "feature_cols": "[{'name': 'user_index', 'active': True, 'dtype': 'int', 'type': 'meta'}, {'name': 'item_index', 'active': True, 'dtype': 'int', 'type': 'meta'}, {'name': 'seq_len', 'active': True, 'dtype': 'int', 'type': 'meta'}, {'name': 'user_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 470571}, {'name': 'item_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 846812, 'source': 'item'}, {'name': 'cate_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 6409, 'source': 'item'}, {'name': 'campaign_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 354106, 'source': 'item'}, {'name': 'customer_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 220826, 'source': 'item'}, {'name': 'brand', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 88145, 'source': 'item'}, {'name': 'price_bucket', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 11, 'source': 'item'}, {'name': 'cms_segid', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 99}, {'name': 'cms_group_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 15}, {'name': 'final_gender_code', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 4}, {'name': 'age_level', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 9}, {'name': 'pvalue_level', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 5}, {'name': 'shopping_level', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 5}, {'name': 'occupation', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 4}, {'name': 'new_user_class_level', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 6}, {'name': 'pid', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 4}, {'name': 'day_of_week', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 8}, {'name': 'is_weekend', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 3}, {'name': 'hour', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 25}, {'name': 'action', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 17, 'source': 'action'}]",
+    "gpu": "0",
+    "keep_checkpoint": "False",
+    "label_col": "[{'name': 'is_click', 'dtype': 'float'}, {'name': 'cart', 'dtype': 'float'}, {'name': 'fav', 'dtype': 'float'}, {'name': 'buy', 'dtype': 'float'}]",
+    "local_rank": "0",
+    "loss": "['binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy']",
+    "low_rank_dim": "16",
+    "max_len": "100",
+    "metrics": "['logloss', 'AUC']",
+    "model": "RankMixer",
+    "model_id": "RankMixer_Taobao_Action_seed20262027",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': 0}",
+    "monitor_mode": "max",
+    "net_dropout": "0",
+    "num_heads": "2",
+    "num_layers": "3",
+    "num_mix_heads": "2",
+    "num_ns_token": "5",
+    "num_real_token": "0",
+    "num_tasks": "4",
+    "num_workers": "4",
+    "rank": "0",
+    "real_seq_len": "20",
+    "rebuild_dataset": "False",
+    "seed": "20262027",
+    "shuffle": "True",
+    "target_label": "None",
+    "task": "binary_classification",
+    "test_data": "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/test/data",
+    "test_item_info": "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/test/item_info",
+    "test_user_info": "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/test/user_info",
+    "token_dim": "256",
+    "tower_activations": "ReLU",
+    "tower_hidden_units": "[128, 64]",
+    "train_data": "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/train/data",
+    "train_item_info": "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/train/item_info",
+    "train_user_info": "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/train/user_info",
+    "valid_data": "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/valid/data",
+    "valid_item_info": "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/valid/item_info",
+    "valid_user_info": "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/valid/user_info",
+    "world_size": "2"
+}
+2026-10-26 08:55:10,846 P844008 INFO Set up feature processor...
+2026-10-26 08:55:10,846 P844008 INFO Fit feature processor...
+2026-10-26 08:55:10,846 P844008 INFO Processing column: {'name': 'user_index', 'active': True, 'dtype': 'int', 'type': 'meta'}
+2026-10-26 08:55:10,846 P844008 INFO Processing column: {'name': 'item_index', 'active': True, 'dtype': 'int', 'type': 'meta'}
+2026-10-26 08:55:10,846 P844008 INFO Processing column: {'name': 'seq_len', 'active': True, 'dtype': 'int', 'type': 'meta'}
+2026-10-26 08:55:10,846 P844008 INFO Processing column: {'name': 'user_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 470571}
+2026-10-26 08:55:10,950 P844008 INFO Processing column: {'name': 'item_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 846812, 'source': 'item'}
+2026-10-26 08:55:11,137 P844008 INFO Processing column: {'name': 'cate_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 6409, 'source': 'item'}
+2026-10-26 08:55:11,139 P844008 INFO Processing column: {'name': 'campaign_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 354106, 'source': 'item'}
+2026-10-26 08:55:11,219 P844008 INFO Processing column: {'name': 'customer_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 220826, 'source': 'item'}
+2026-10-26 08:55:11,266 P844008 INFO Processing column: {'name': 'brand', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 88145, 'source': 'item'}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'price_bucket', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 11, 'source': 'item'}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'cms_segid', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 99}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'cms_group_id', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 15}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'final_gender_code', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 4}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'age_level', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 9}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'pvalue_level', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 5}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'shopping_level', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 5}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'occupation', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 4}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'new_user_class_level', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 6}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'pid', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 4}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'day_of_week', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 8}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'is_weekend', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 3}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'hour', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 25}
+2026-10-26 08:55:11,285 P844008 INFO Processing column: {'name': 'action', 'active': True, 'dtype': 'int', 'type': 'categorical', 'vocab_size': 17, 'source': 'action'}
+2026-10-26 08:55:11,285 P844008 INFO Set column index...
+2026-10-26 08:55:11,285 P844008 INFO Save feature_map to json: /data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/feature_map.json
+2026-10-26 08:55:11,286 P844008 INFO Pickle feature_encode: /data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/feature_processor.pkl
+2026-10-26 08:55:11,359 P844008 INFO Save feature_vocab to json: /data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/feature_vocab.json
+2026-10-26 08:55:13,401 P844008 INFO Set feature processor done.
+2026-10-26 08:55:13,411 P844008 INFO Load feature_map from json: /data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/UniRank/data/Taobao/UniRank-Taobao/feature_map.json
+2026-10-26 08:55:13,411 P844008 INFO Set column index...
+2026-10-26 08:55:13,412 P844008 INFO Feature specs: {
+    "action": "{'source': 'action', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 17}",
+    "age_level": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 9}",
+    "brand": "{'source': 'item', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 88145}",
+    "campaign_id": "{'source': 'item', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 354106}",
+    "cate_id": "{'source': 'item', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 6409}",
+    "cms_group_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 15}",
+    "cms_segid": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 99}",
+    "customer_id": "{'source': 'item', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 220826}",
+    "day_of_week": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 8}",
+    "final_gender_code": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 4}",
+    "hour": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 25}",
+    "is_weekend": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 3}",
+    "item_id": "{'source': 'item', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 846812}",
+    "item_index": "{'type': 'meta'}",
+    "new_user_class_level": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 6}",
+    "occupation": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 4}",
+    "pid": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 4}",
+    "price_bucket": "{'source': 'item', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 11}",
+    "pvalue_level": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 5}",
+    "seq_len": "{'type': 'meta'}",
+    "shopping_level": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 5}",
+    "user_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'vocab_size': 470571}",
+    "user_index": "{'type': 'meta'}"
+}
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/HSAF/run_expid.py", line 266, in <module>
+[rank0]:     model = model_class(feature_map, **params)
+[rank0]:   File "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/HSAF/model_zoo/RankMixer.py", line 74, in __init__
+[rank0]:     super(RankMixer, self).__init__(feature_map,
+[rank0]:   File "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/HSAF/unirank/pytorch/models/multitask_model.py", line 46, in __init__
+[rank0]:     super(MultiTaskModel, self).__init__(feature_map=feature_map,
+[rank0]:   File "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/HSAF/unirank/pytorch/models/rank_model.py", line 67, in __init__
+[rank0]:     self._verbose = kwargs["verbose"]
+[rank0]: KeyError: 'verbose'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/HSAF/run_expid.py", line 266, in <module>
+[rank1]:     model = model_class(feature_map, **params)
+[rank1]:   File "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/HSAF/model_zoo/RankMixer.py", line 74, in __init__
+[rank1]:     super(RankMixer, self).__init__(feature_map,
+[rank1]:   File "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/HSAF/unirank/pytorch/models/multitask_model.py", line 46, in __init__
+[rank1]:     super(MultiTaskModel, self).__init__(feature_map=feature_map,
+[rank1]:   File "/data/jianguohao/Unifying_Sequence_Modeling_and_Feature_Interaction/HSAF/unirank/pytorch/models/rank_model.py", line 67, in __init__
+[rank1]:     self._verbose = kwargs["verbose"]
+[rank1]: KeyError: 'verbose'
+W1026 08:55:14.700000 843896 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 844008 closing signal SIGTERM
+E1026 08:55:14.731000 843896 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 844009) of binary: /data/jianguohao/miniconda3/envs/recsae/bin/python
+Traceback (most recent call last):
+  File "/data/jianguohao/miniconda3/envs/recsae/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+  File "/data/jianguohao/miniconda3/envs/recsae/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data/jianguohao/miniconda3/envs/recsae/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/data/jianguohao/miniconda3/envs/recsae/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/data/jianguohao/miniconda3/envs/recsae/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/data/jianguohao/miniconda3/envs/recsae/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+run_expid.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-26_08:55:14
+  host      : iv-ye7vc1wav4xjd1u2sih9
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 844009)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
